@@ -1,3 +1,9 @@
+/**
+ * Get the length of an observableArray without the _destroyed items
+ * 
+ * @link http://stackoverflow.com/a/18743827/1542064
+ */
+
 ko.observableArray.fn.totalVisible = function() {
     var items = this(), count = 0;
 

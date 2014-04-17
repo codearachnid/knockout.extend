@@ -1,0 +1,25 @@
+{
+  "name": "knockout.extend",
+  "version": "0.1",
+  "description": "Collection of useful KnockoutJS extended utils and functionality",
+  "main": "knockout.extend.js",
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codearachnid/knockout.extend"
+  },
+  "author": "Timothy Wood",
+  "homepage": "http://codearachnid.github.com/knockout.extend/",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/codearachnid/knockout.extend/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-jshint": "~0.6.0"
+  }
+}

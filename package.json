@@ -1,8 +1,8 @@
 {
   "name": "knockout.extend",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "Collection of useful KnockoutJS extended utils and functionality",
-  "main": "knockout.extend.js",
+  "main": "knockout.extend",
   "scripts": {
     "test": "grunt test --verbose"
   },
@@ -20,6 +20,7 @@
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-watch": "~0.4.4",
-    "grunt-contrib-jshint": "~0.6.0"
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.4.0"
   }
 }

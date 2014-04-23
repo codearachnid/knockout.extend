@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
     meta : {
       banner : '/*!\n' +
-      ' * <%= pkg.main %> v<%= pkg.version %>\n' +
+      ' * <%= pkg.main %>.js v<%= pkg.version %>\n' +
       ' * <%= pkg.homepage %>\n' +
       ' *\n' +
       ' * Copyright <%= grunt.template.today("yyyy") %>, <%= pkg.author %>\n' +
@@ -30,7 +30,18 @@ module.exports = function(grunt) {
           'lib/observableArray.totalVisible.js',
           'lib/bindingHandlers.select2.js'
         ],
-        dest: '<%= pkg.main %>'
+        dest: '<%= pkg.main %>.js'
+      }
+    },
+
+    uglify: {
+      options: {
+        banner: '<%= meta.banner %>'
+      },
+      dist: {
+        files: {
+          '<%= pkg.main %>.min.js': ['<%= concat.dist.dest %>']
+        }
       }
     },
 
@@ -48,7 +59,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('test', ['jshint']);
-  grunt.registerTask('default', ['test', 'concat']);
+  grunt.registerTask('default', ['test', 'concat', 'uglify']);
 };

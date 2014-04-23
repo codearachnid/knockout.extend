@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           'lib/observableArray.totalVisible.js',
           'lib/bindingHandlers.select2.js'
         ],
-        dest: '<%= pkg.main %>.js'
+        dest: 'src/<%= pkg.main %>.js'
       }
     },
 
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= pkg.main %>.min.js': ['<%= concat.dist.dest %>']
+          'src/<%= pkg.main %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },
